@@ -1,0 +1,4 @@
+@mixin border($bgcolor) {
+    background: $bgcolor;
+    border: 5px solid lighten($color: $bgcolor, $amount: 10%);
+}

@@ -1,0 +1,64 @@
+
+.aside-section {
+    width: 50%;
+    padding-left: 150px;
+}
+
+.greeting {
+    font-size: 20px;
+    color: #8C8C8C;
+}
+
+.greeting__cont {
+    margin-top: 80px;
+}
+
+.title {
+    font-size: 20px;
+    color: #1D1D1D;
+    font-weight: 500;
+}
+
+.main__content  {
+    margin-top: 60px;
+}
+
+.cards {
+    margin-top: 20px;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    .card {
+        width: 33.333%;
+        max-width: 140px;
+        height: 200px;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            &.vote {
+                @include border(#B4B7FF);
+            }
+            &.breeds {
+                @include border(#97EAB9)
+            }
+            &.search {
+                @include border(#FFD280);
+            }
+        }
+        &__btn {
+            background: #fff;
+            color: #FF868E;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+

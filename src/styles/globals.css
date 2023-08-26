@@ -1,0 +1,32 @@
+@import "./normalize/normalize.css";
+@import "./normalize/reset.css";
+
+body {
+  background-color: #e5e5e530;
+}
+
+.main {
+  display: flex;
+  padding: 30px;
+}
+
+.img__section {
+  width: 50%;
+  padding-left: 30px;
+  position: relative;
+}
+
+.img__inner {
+  background-color: #fbe0dc;
+  border-radius: 20px;
+  width: 88%;
+  margin-right: 0;
+  margin-left: auto;
+  height: calc(100vh - 60px);
+}
+
+.img {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+}
