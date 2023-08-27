@@ -1,3 +1,14 @@
 @import "./additional/mixins.scss";
+@import "./additional/variables.scss";
 @import "./sections/asideLayout.scss";
 @import "./sections/breedsSection.scss";
+
+.section__title {
+    background: $title__bg;
+    padding: 5px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}

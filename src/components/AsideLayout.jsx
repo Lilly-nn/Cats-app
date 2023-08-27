@@ -23,7 +23,7 @@ export default function AsideLayout() {
                 </Link>   
                 <Link href="/breeds" className="card">
                     <div className="card__content breed">
-                        <img src="/assets/pet-breeds.svg" alt="breed card"/>
+                        <img src="/assets/pet-breeds.png" alt="breed card"/>
                     </div>
                     <button className="card__btn">Breeds</button>
                 </Link> 
@@ -33,7 +33,6 @@ export default function AsideLayout() {
                     </div>
                     <button className="card__btn">Gallery</button>
                 </Link>
-              
             </div>
         </div>
     </section>

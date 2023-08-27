@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import fetchBreeds from "../libs/apollo rest/allBreeds.js";
+import fetchBreeds from "../libs/apollo-rest/allBreeds.js";
 
 export function useFetchAll() {
     const [cats, setCats] = useState(null);

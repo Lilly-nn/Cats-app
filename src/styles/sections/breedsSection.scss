@@ -7,6 +7,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 10px;
         .search-cont {
             background: #fff;
             width: 70%;
@@ -27,27 +28,70 @@
             img {
                 cursor: pointer;
             }
+        
         }
         &-icons {
             width: 30%;
         }
     }
     &__content {
-
+        background: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        .select {
+            border-radius: 10px;
+            &:first-of-type {
+                flex-grow: 1;
+            }
+        }
     }
     &__sort {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        column-gap: 10px;
+        .back {
+            background-color: $icon__bg;
+            padding: 10px;
+            border-radius: 10px;
+        }
     }
 }
 
 .card {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-    img {
-        margin-top: 8px;
-        vertical-align: middle
+    &__inner { 
+        border-radius: 20px;
+        position: relative;
+        &:hover {
+            background-color: #FF868E;
+            .card__name {
+                opacity: 1;
+            }
+        }
+    }
+    &__img {
+        border-radius: 20px;
+        height: 100%;
+        transition: all .2s linear;
+        &:hover {
+            cursor: pointer;
+            opacity: 30%;
+        }
+    }
+    &__name {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        color: $title__bg;
+        white-space: nowrap;
+        border-radius: 10px;
+        padding: 5px 30px;
+        opacity: 0;
+
+    }
+    &__container {
+        margin-top: 20px;
     }
 }
