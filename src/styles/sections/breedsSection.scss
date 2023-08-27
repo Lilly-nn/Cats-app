@@ -1,0 +1,53 @@
+.breeds {
+    &__section {  
+     width: 50%;
+    }
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .search-cont {
+            background: #fff;
+            width: 70%;
+            padding: 0 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+                color: #8C8C8C;
+                font-size: 20px;
+                width: 90%;
+                padding: 15px 0;
+                &:focus {
+                    outline: none;
+                }
+            }
+            img {
+                cursor: pointer;
+            }
+        }
+        &-icons {
+            width: 30%;
+        }
+    }
+    &__content {
+
+    }
+    &__sort {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.card {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    img {
+        margin-top: 8px;
+        vertical-align: middle
+    }
+}

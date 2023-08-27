@@ -2,6 +2,7 @@
 .aside-section {
     width: 50%;
     padding-left: 150px;
+    height: 90vh;
 }
 
 .greeting {
@@ -40,7 +41,7 @@
             &.vote {
                 @include border(#B4B7FF);
             }
-            &.breeds {
+            &.breed {
                 @include border(#97EAB9)
             }
             &.search {
