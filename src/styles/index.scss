@@ -3,6 +3,10 @@
 @import "./sections/asideLayout.scss";
 @import "./sections/breedsSection.scss";
 
+.section {
+    margin-left: 50%;
+}
+
 .section__title {
     background: $title__bg;
     padding: 5px 30px;
@@ -11,4 +15,8 @@
     color: #fff;
     font-size: 20px;
     font-weight: 500;
+}
+
+.nothing-found {
+    white-space: nowrap;
 }

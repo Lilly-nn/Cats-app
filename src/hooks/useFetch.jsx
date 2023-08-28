@@ -24,7 +24,10 @@ export function useFetchBreeds() {
   
     async function fetchOptions() { 
         const {data} = await fetchBreeds;
-        const options = data.map(el => el.name);
+        let options = data.map(el => ({
+              id: el.id,
+              name: el.name,
+            }));
         setBreedOptions(options);
     } 
 
