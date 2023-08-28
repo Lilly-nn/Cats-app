@@ -1,5 +1,7 @@
+import SearchHeader from '@/components/SearchHeader';
 import { fetchImg } from '@/utils/fetchImg';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default async function InfoPage({params}) {
   const {id} = params;
@@ -9,32 +11,45 @@ export default async function InfoPage({params}) {
   const img = await fetchImg(imgId);
 
   return (
-    <section className='breed__info'>
-        <img src={img} alt={name} />
-        <div>
-            <h4 className='breed__name'>{name}</h4>
-            <div className='breed__details'>
-                <dl className='f-col'>
-                    <dt className='detail'>Temperament</dt>
-                    <dd>{temperament}</dd>
-                </dl>
-                <div className='s-col'>
-                    <dl>
+    <section className='breed__info section'>
+       <SearchHeader/>
+        <div className='breeds__content'>
+            <div className='breeds__sort'>
+                <Link href="/breeds" className="back">
+                 <img src="/assets/icons/back-20.png"/> 
+                </Link>
+                <span className='section__title'>Breeds</span>
+            </div>
+            <div className='breed__content'>
+              <img src={img} alt={name} className='breed__img' />
+                <h4 className='breed__name'>{name}</h4>
+                <div className='breed__details'>
+                   <div className='f-col'>
+                      <dl>
+                       <dt className='detail'>Temperament</dt>
+                       <dd className='detail-info'>{temperament}</dd>
+                      </dl>
+                   </div>
+                   <div className='s-col'>
+                       <dl>
                         <dt className='detail'>Origin</dt>
-                        <dd>{origin}</dd>
+                        <dd className='detail-info'>{origin}</dd>
                     </dl>
                    <dl>
                    <dt className='detail'>Weight</dt>
-                    <dd>{`${weight.metric} kgs`}</dd>
+                    <dd className='detail-info'>{`${weight.metric} kgs`}</dd>
                    </dl>
                   <dl>
                   <dt className='detail'>Life Span</dt>
-                    <dd>{`${life_span} years`}</dd>
+                    <dd className='detail-info'>{`${life_span} years`}</dd>
                   </dl>
                  
                 </div>
             </div>
         </div>
+        </div>
+       
+      
 
     </section>
   )

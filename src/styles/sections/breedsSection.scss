@@ -3,7 +3,7 @@
      width: 50%;
     }
     &__header {
-        width: 100%;
+        width: calc(100% - 20px);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -17,6 +17,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border: 2px solid transparent;
+            &:focus-within {
+                border: 2px solid $title__bg;
+            }
             input {
                 color: #8C8C8C;
                 font-size: 20px;
@@ -118,5 +122,45 @@
     }
     &__container {
         margin-top: 20px;
+    }
+}
+
+.breed {
+    &__img {
+        max-height: 60vh;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__name {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    &__details {
+        display: flex;
+        width: 100%;
+        .detail {
+            color: #1D1D1D;
+            font-weight: 500;
+            &::after {
+                content: ":";
+            }
+        }
+        .detail-info {
+            color: #8C8C8C;
+        }
+        dl {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5px;
+        }
+        .f-col {
+            width: 50%;
+        }
+        .s-col {
+            width: 50%;
+        }
     }
 }

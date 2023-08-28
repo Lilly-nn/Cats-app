@@ -8,6 +8,7 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import fetchBreeds from "../../libs/apollo-rest/allBreeds.js";
+import SearchHeader from "@/components/SearchHeader.jsx";
 
 export default function BreedsSection() {
   const [cats, setCats] = useState([]);
@@ -57,17 +58,7 @@ export default function BreedsSection() {
 
   return (
     <section className='breeds__section section'>
-        <div className='breeds__header'>
-            <div className='search-cont'>
-                <input name="name" value={name} onChange={handleChange} type='text' placeholder='Search for breeds by name'/>
-                <img  src="/assets/icons/search.svg"/>
-            </div>
-            <div className='breeds__header-icons'>
-                <img src="/assets/icons/like-30.svg"/>
-                <img src="/assets/icons/fav-30.svg"/>
-                <img src="/assets/icons/dislike-30.svg"/>
-            </div>
-        </div>
+        <SearchHeader name={name} handleChange={handleChange}/>
         <div className='breeds__content'>
             <div className='breeds__sort'>
                 <button onClick={() => router.back()}  className="back">
