@@ -2,10 +2,15 @@
 @import "./additional/variables.scss";
 @import "./sections/asideLayout.scss";
 @import "./sections/breedsSection.scss";
+@import "./sections/gallerySection.scss";
+@import "./sections/modal.scss";
 
 .section {
     margin-left: 50%;
     width: 50%;
+    &.overflow {
+        height: 85vh;
+    }
 }
 
 .section__title {
@@ -18,6 +23,17 @@
     font-weight: 500;
 }
 
+.section__id {
+    background: $title__bg;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
 .nothing-found {
     white-space: nowrap;
 }
+
+

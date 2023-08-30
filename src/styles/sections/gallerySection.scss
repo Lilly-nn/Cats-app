@@ -1,0 +1,45 @@
+.gallery {
+    &__sort {
+        display: flex;
+        flex-wrap: wrap;
+        background: #F8F8F7;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 10px 20px;
+        .load {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            column-gap: 10px;
+                img {
+                    padding: 10px;
+                    background: #fff;
+                    border-radius: 10px;
+                    margin-top: 12px;
+                    border: 1px solid #d3d3d3;
+                    cursor: pointer;
+                }
+            
+        }
+        .select__cont {
+            width: calc(50% - 20px);
+            &:last-of-type {
+               width: 80%;
+            }
+    
+            display: flex;
+            flex-direction: column;
+           
+            .select {
+                background: #fff;
+                border: none;
+            }
+            .label {
+                color: #8C8C8C;
+                font-weight: 500;
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

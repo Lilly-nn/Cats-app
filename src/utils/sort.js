@@ -3,11 +3,11 @@ export function sortByName(arr, setState, name) {
 }
 
 export function sortDown(arr, field, setState){
-    const sortedArr = [...arr].sort((el1, el2) => el2.name < el1[field] ? 1 : -1 );
+    const sortedArr = [...arr].sort((el1, el2) => el2[field] < el1[field] ? 1 : -1 );
     setState(sortedArr)
 }
 
 export function sortUp(arr, field, setState){
-    const sortedArr = [...arr].sort((el1, el2) => el2.name > el1[field] ? 1 : -1 );
+    const sortedArr = [...arr].sort((el1, el2) => el2[field] > el1[field] ? 1 : -1 );
     setState(sortedArr)
 }

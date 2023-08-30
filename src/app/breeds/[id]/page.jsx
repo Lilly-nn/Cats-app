@@ -14,16 +14,18 @@ export default async function InfoPage({params}) {
     <section className='breed__info section'>
        <SearchHeader/>
         <div className='breeds__content'>
-            <div className='breeds__sort'>
+            <div className='breeds__sort id'>
                 <Link href="/breeds" className="back">
                  <img src="/assets/icons/back-20.png"/> 
                 </Link>
                 <span className='section__title'>Breeds</span>
+                <span className='section__id'>{id}</span>
             </div>
             <div className='breed__content'>
               <img src={img} alt={name} className='breed__img' />
-                <h4 className='breed__name'>{name}</h4>
-                <div className='breed__details'>
+               
+                <div className='breed__details'> 
+                   <h4 className='breed__name'>{name}</h4>
                    <div className='f-col'>
                       <dl>
                        <dt className='detail'>Temperament</dt>

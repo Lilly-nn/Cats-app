@@ -49,6 +49,16 @@
                 @include border(#FFD280);
             }
         }
+        &.active {
+            .card__content {
+                  @include borderOnly(#FF868E);
+            }
+            .card__btn {
+                background: #FF868E;
+                color: #fff;
+            }
+          
+        }
         &__btn {
             background: #fff;
             color: #FF868E;

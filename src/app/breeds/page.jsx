@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import fetchBreeds from "../../libs/apollo-rest/allBreeds.js";
 import SearchHeader from "@/components/SearchHeader.jsx";
+import { limitVariants } from "@/utils/info/limit.js";
 
 export default function BreedsSection() {
   const [cats, setCats] = useState([]);
@@ -20,7 +21,6 @@ export default function BreedsSection() {
     name: ""
   });
   const { limit, breed, name } = sortInfo;
-  const limitVariants = [ {text: 5, value: 5}, {text: 10, value: 10}, {text: 15, value: 15}, {text: 'none', value: 500}];
   const router = useRouter();
 
   async function fetchAllCats() {
@@ -56,6 +56,7 @@ export default function BreedsSection() {
    
   }
 
+
   return (
     <section className='breeds__section section'>
         <SearchHeader name={name} handleChange={handleChange}/>
@@ -64,7 +65,7 @@ export default function BreedsSection() {
                 <button onClick={() => router.back()}  className="back">
                  <img src="/assets/icons/back-20.png"/> 
                 </button>
-                <span className='section__title'>Breeds</span>
+                <span className={`section__title `}>Breeds</span>
                 <Select name="breed" size="small" value={breed} onChange={handleChange} className="select__breeds select">
                     <MenuItem value="all">All breeds</MenuItem>
                     {breedOptions && breedOptions.length > 0 && breedOptions.map(option => {

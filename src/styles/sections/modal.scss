@@ -1,0 +1,88 @@
+.modal {
+    &__container {
+        position: absolute;
+        padding: 0 20px;
+        bottom: 0;
+        top: 0;
+        background: #F8F8F7;
+        width: calc(50% - 30px);
+        z-index: 50;
+        margin: 30px 0;
+        border-radius: 20px;
+        .img {
+            &__drop {
+                background: #fff;
+                padding: 60px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 20px;
+                border: 4px dashed #FBE0DC;
+                margin: 40px 0 20px;
+                .instructions {
+                    position: absolute;
+                    font-size: 20px;
+                    color: #8C8C8C;
+                    .bold {
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+            }
+            &__status {
+                color: #8C8C8C;
+                font-size: 20px;
+                span {
+                    margin-left: 5px;
+                }
+            }
+        }
+        .hidden {
+            display: none;
+        }
+    }
+    &__header {
+        margin-top: 100px;
+        text-align: center;
+        h5 {
+            color: #1D1D1D;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        span {
+            color: #8C8C8C;
+            font-size: 20px;
+            a{
+                color: #FF868E;
+            }
+        }
+    }
+    &__footer {
+        text-align: center;
+    }
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(black, .6);
+        z-index: 19;
+        height: 100vh;
+        &.hidden {
+            display: none;
+        }
+    }
+  
+}

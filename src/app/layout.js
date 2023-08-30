@@ -14,11 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"> 
       <body className={jost.className}>
-        <section className='page'>
+        <section className='page'>        
           <main className='main'>
+            <div className='modal__mask hidden'/>
             <AsideLayout/>
             {children}
-          </main>
+          </main>              
         </section>
       </body>
     </html>

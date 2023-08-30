@@ -67,6 +67,36 @@
         justify-content: space-between;
         column-gap: 10px;
         margin-bottom: 20px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+        .upload-btn {
+            background: $icon__bg;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            border-radius: 10px;
+            padding: 12px 30px;
+            &:hover {
+                cursor: pointer;
+            }
+            button {
+                color: $title__bg;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }
+        }
+        &.id {
+            justify-content: unset;
+            .section__title {
+                color: $title__bg;
+                background: $icon__bg;
+            }
+        }
         &-section {
             display: flex;
             column-gap: 10px;
@@ -96,6 +126,22 @@
             .card__name {
                 opacity: 1;
             }
+            .heart {
+                opacity: 1;
+            }
+        }
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 0;
+            background: #fff;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     &__img {
@@ -118,7 +164,6 @@
         border-radius: 10px;
         padding: 5px 30px;
         opacity: 0;
-
     }
     &__container {
         margin-top: 20px;
@@ -128,6 +173,7 @@
 .breed {
     &__img {
         max-height: 60vh;
+        border-radius: 20px;
     }
     &__content {
         display: flex;
@@ -137,10 +183,23 @@
     &__name {
         font-size: 36px;
         font-weight: 500;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(-20% - 5px);
+        padding: 5px 40px;
+        background: #fff;
+        white-space: nowrap;
     }
     &__details {
         display: flex;
         width: 100%;
+        border: 2px solid $icon__bg;
+        border-radius: 20px;
+        padding: 40px;
+        column-gap: 20px;
+        margin-top: 50px;
+        position: relative;
         .detail {
             color: #1D1D1D;
             font-weight: 500;
@@ -156,11 +215,18 @@
             flex-wrap: wrap;
             column-gap: 5px;
         }
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
         .f-col {
             width: 50%;
+            @extend .flex-col;
         }
         .s-col {
             width: 50%;
+            @extend .flex-col;
         }
     }
 }
