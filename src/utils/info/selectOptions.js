@@ -1,4 +1,4 @@
-import { increaseBy } from "./increaseBy";
+import { increaseBy } from "../increaseBy";
 
 export const orderOptions = [ {text: "Random", value: "RAND"}, {text: "Descending", value: "DESC"}, {text: "Ascending", value: "ASC"}];
 

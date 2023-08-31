@@ -1,9 +1,9 @@
 "use client"
+import Service from "@/API/Service";
 import ImageCard from "@/components/ImageCard";
 import Modal from "@/components/Modal";
 import SearchHeader from "@/components/SearchHeader";
 import { useFetchBreeds } from "@/hooks/useFetch";
-import { fetchByBreed, fetchByLimit } from "@/utils/fetchInfo";
 import { limitOptions, orderOptions } from "@/utils/info/selectOptions";
 import { sortDown, sortUp } from "@/utils/sort";
 import { Masonry } from "@mui/lab";
@@ -38,11 +38,11 @@ export default function GalleryPage() {
   async function fetchInfo() {
     setLoading(true);
     if(breed !== 'all') {
-       const data = await fetchByBreed(breed, limit);
+       const data = await Service.fetchByBreed(breed, limit);
        setCats(data);
-       setLoading(false);console.log(data);
+       setLoading(false);
     }else {
-        const data = await fetchByLimit(limit)
+        const data = await Service.fetchByLimit(limit)
         setCats(data);
         setLoading(false);
     }
