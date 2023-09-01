@@ -1,6 +1,8 @@
-import React from 'react'
+"use client"
+import { useRouter } from "next/navigation"
 
 export default function SearchHeader({name, handleChange}) {
+  const router = useRouter();
   return (
     <div className='breeds__header'>
             <div className='search-cont'>
@@ -8,9 +10,9 @@ export default function SearchHeader({name, handleChange}) {
                 <img  src="/assets/icons/search.svg"/>
             </div>
             <div className='breeds__header-icons'>
-                <img src="/assets/icons/like-30.svg"/>
-                <img src="/assets/icons/fav-30.svg"/>
-                <img src="/assets/icons/dislike-30.svg"/>
+                <img onClick={() => router.push('/likes')} src="/assets/icons/like-30.svg"/>
+                <img onClick={() => router.push('/favourites')} src="/assets/icons/fav-30.svg"/>
+                <img onClick={() => router.push('/dislikes')} src="/assets/icons/dislike-30.svg"/>
             </div>
     </div>
   )

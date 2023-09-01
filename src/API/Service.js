@@ -33,4 +33,13 @@ export default class Service {
         const { data } = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=${limit}&api_key=${process.env.NEXT_PUBLIC_CAT_API}`);
         return data;
     }
+    static async fetchUploadedPhotos(userId) {
+        const result = await axios.get(`https://api.thecatapi.com/v1/images/?sub_id=${userId}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': process.env.NEXT_PUBLIC_CAT_API
+          }
+        })
+        return result.data;
+    }
 }

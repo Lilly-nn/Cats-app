@@ -4,6 +4,7 @@
 @import "./sections/breedsSection.scss";
 @import "./sections/gallerySection.scss";
 @import "./sections/modal.scss";
+@import "./sections/votesPage.scss";
 
 .section {
     margin-left: 50%;
@@ -14,6 +15,7 @@
 }
 
 .section__title {
+    letter-spacing: 2px;
     background: $title__bg;
     padding: 5px 30px;
     border-radius: 10px;

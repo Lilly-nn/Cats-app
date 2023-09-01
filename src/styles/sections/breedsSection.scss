@@ -121,7 +121,7 @@
     &__inner { 
         border-radius: 20px;
         position: relative;
-        &:hover {
+        &:not(&.photo):hover {
             background-color: #FF868E;
             .card__name {
                 opacity: 1;
@@ -130,6 +130,7 @@
                 opacity: 1;
             }
         }
+      
         .heart {
             position: absolute;
             top: 50%;

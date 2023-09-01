@@ -8,7 +8,6 @@ import { limitOptions, orderOptions } from "@/utils/info/selectOptions";
 import { sortDown, sortUp } from "@/utils/sort";
 import { Masonry } from "@mui/lab";
 import { MenuItem, Select, Tooltip } from "@mui/material";
-import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -33,7 +32,6 @@ export default function GalleryPage() {
         [e.target.name]: e.target.value
     })
   }
-
 
   async function fetchInfo() {
     setLoading(true);
@@ -109,7 +107,7 @@ export default function GalleryPage() {
                     <div className ="select__cont">
                         <span className="label">Limit</span>
                         <Select name="limit" size="small" value={limit}className="select__breeds select" onChange={handleChange}>
-                            {limitOptions.map(option => <MenuItem value={option.limit}>{`${option.limit} items per page`}</MenuItem>)}
+                            {limitOptions.map(option => <MenuItem key={option.limit} value={option.limit}>{`${option.limit} items per page`}</MenuItem>)}
                         </Select>
                     </div>
                     <Tooltip title="Load" >

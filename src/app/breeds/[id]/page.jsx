@@ -1,5 +1,5 @@
+import Service from '@/API/Service';
 import SearchHeader from '@/components/SearchHeader';
-import { fetchImg } from '@/utils/fetchImg';
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -8,7 +8,7 @@ export default async function InfoPage({params}) {
   const {data: allInfo} = await axios.get('https://api.thecatapi.com/v1/breeds');
   const breedInfo = allInfo.find(el => el.id === id);
   const { name, weight, id: breedID, temperament, life_span, origin, reference_image_id: imgId } = breedInfo;
-  const img = await fetchImg(imgId);
+  const img = imgId ? await Service.fetchImg(imgId) : "/assets/upload-bg.png";
 
   return (
     <section className='breed__info section'>
@@ -23,7 +23,6 @@ export default async function InfoPage({params}) {
             </div>
             <div className='breed__content'>
               <img src={img} alt={name} className='breed__img' />
-               
                 <div className='breed__details'> 
                    <h4 className='breed__name'>{name}</h4>
                    <div className='f-col'>

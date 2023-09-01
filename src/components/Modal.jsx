@@ -70,7 +70,6 @@ export default function Modal({isOpen, setIsOpen}) {
     setUploadResult(null); 
   }
 
-
   return (
     isOpen && (
         <div className='modal__container'>
@@ -80,7 +79,7 @@ export default function Modal({isOpen, setIsOpen}) {
             </button>
             <div className='modal__header'>
                 <h5>Upload a .jpg or .png Cat Image</h5>
-                <span>Any uploads must comply with the <a>upload guidelines</a> or face deletion.</span>
+                <span>Any uploads must comply with the <a href="https://thecatapi.com/privacy" target="_blank">upload guidelines</a> or face deletion.</span>
             </div>
             <div className='img__drop' 
                 onDragStart={(e) => dragStartHandler(e)}
